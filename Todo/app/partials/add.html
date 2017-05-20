@@ -1,0 +1,11 @@
+﻿{{welcome}}
+
+<div class="form-group">
+    <label for="name">To Do Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name" ng-model="todo.Name">
+</div>
+<div class="form-group">
+    <label for="isComplete">Is Complete</label>
+    <input type="checkbox" id="isComplete" ng-model="todo.IsComplete">
+</div>
+<button ng-click="submit(todo)">Submit</button>

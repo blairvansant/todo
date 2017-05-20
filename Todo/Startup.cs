@@ -1,5 +1,7 @@
 ﻿using Microsoft.Owin;
+using Newtonsoft.Json.Serialization;
 using Owin;
+using System.Web.Http;
 
 [assembly: OwinStartupAttribute(typeof(Todo.Startup))]
 namespace Todo
@@ -8,7 +10,10 @@ namespace Todo
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
+
+            HttpConfiguration config = GlobalConfiguration.Configuration;
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
         }
     }
 }
