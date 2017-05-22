@@ -1,6 +1,9 @@
 ﻿{{welcome}}
 
 <ul>
-    <!-- ng-repeats are used to easily display every item in a list -->
+    <!-- 
+        ng-repeats are used to easily display every item in a list
+        https://docs.angularjs.org/api/ng/directive/ngRepeat
+     -->
     <li ng-repeat="todo in list">{{todo.name}} {{todo.isComplete}}</li>
 </ul>

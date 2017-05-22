@@ -5,6 +5,7 @@
     /*
         This syntax gives the same result as the syntax in the home
         controller. You're just explicitly injecting the dependencies.
+        https://docs.angularjs.org/guide/di
      */
     addController.$inject = ['$scope', '$http', '$location'];
 
@@ -21,6 +22,7 @@
         };
 
         //This function sends an HTTP POST request to our api.
+        //https://docs.angularjs.org/api/ng/service/$http
         $scope.submit = function (todo) {
             /*
                 Sometimes the $http functionality is abstracted out
