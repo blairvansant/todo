@@ -10,7 +10,7 @@ namespace Todo
     {
         public void Configuration(IAppBuilder app)
         {
-
+            //this config will give us camel-casing with our APIs
             HttpConfiguration config = GlobalConfiguration.Configuration;
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;

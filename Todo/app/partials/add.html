@@ -1,5 +1,11 @@
 ﻿{{welcome}}
-
+<!-- 
+    This is the "form" that creates a todo
+    Instead of using the traditional HTML form, we are data-binding
+    the name and is complete fields with the ng-model and using angular
+    to send the form instead of a HTML form tag.
+    https://docs.angularjs.org/api/ng/directive/ngModel
+ -->
 <div class="form-group">
     <label for="name">To Do Name</label>
     <input type="text" class="form-control" id="name" placeholder="Name" ng-model="todo.Name">
@@ -8,4 +14,8 @@
     <label for="isComplete">Is Complete</label>
     <input type="checkbox" id="isComplete" ng-model="todo.IsComplete">
 </div>
+<!-- 
+    ng-clicks are angular's .on('click') functionality  
+    https://docs.angularjs.org/api/ng/directive/ngClick
+-->
 <button ng-click="submit(todo)">Submit</button>
